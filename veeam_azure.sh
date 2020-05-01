@@ -32,7 +32,7 @@ veeamPassword="YOURVEEAMBACKUPPASS"
 veeamBackupAzureServer="https://YOURVEEAMBACKUPIP"
 veeamBackupAzurePort="443" #Default Port
 
-veeamBearer=$(curl -X POST --header "Content-Type: application/x-www-form-urlencoded" --header "Accept: application/json" -d 'Username=$veeamUsername&Password=$veeamPassword&refresh_token=&grant_type=Password&mfa_token=&mfa_code=' "$veeamBackupAzureServer:$veeamBackupAzurePort/api/oauth2/token" -k --silent | jq -r '.access_token')
+veeamBearer=$(curl -X POST --header "Content-Type: application/x-www-form-urlencoded" --header "Accept: application/json" -d "Username=$veeamUsername&Password=$veeamPassword&refresh_token=&grant_type=Password&mfa_token=&mfa_code=" "$veeamBackupAzureServer:$veeamBackupAzurePort/api/oauth2/token" -k --silent | jq -r '.access_token')
 
 ##
 # Veeam Backup for Azure Overview. This part will check VBA Overview
