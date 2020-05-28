@@ -24,8 +24,11 @@ Or try with this simple steps:
 You will need two extra grafana plugins, in case you do not have them, the pie-chart, and the Worldmap Panel, you can quickly install them with the next:
 
 ``grafana-cli plugins install grafana-worldmap-panel``
+
 ``grafana-cli plugins install grafana-piechart-panel``
+
 ``service grafana-server restart``
+
 
 ----------
 
